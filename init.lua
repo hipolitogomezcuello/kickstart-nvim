@@ -413,6 +413,22 @@ require('lazy').setup({
       },
     },
   },
+  -- Add vim-tmux-navigator, used to navigate between tmux frames seamlessly
+  {
+    'christoomey/vim-tmux-navigator',
+    cmd = {
+      'TmuxNavigateLeft',
+      'TmuxNavigateRight',
+      'TmuxNavigateDown',
+      'TmuxNavigateUp',
+    },
+    keys = {
+      { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
+      { '<c-h>', '<cmd><C-U>TmuxNavigateRight<cr>' },
+      { '<c-h>', '<cmd><C-U>TmuxNavigateDown<cr>' },
+      { '<c-h>', '<cmd><C-U>TmuxNavigateUp<cr>' },
+    },
+  },
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
